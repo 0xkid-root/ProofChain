@@ -1,136 +1,192 @@
-
-# SecureFi 🛡️
-
-**Next-generation smart contract security powered by Mistral AI, delivering instant, on-chain audit reports for cross-chain deployments.**
-
-![Screenshot 2025-03-20 105313](https://github.com/user-attachments/assets/6fa5b2b3-1401-4399-bb79-fc6baba22d6c)
-![Screenshot 2025-03-20 110858](https://github.com/user-attachments/assets/98320fda-e7ec-44af-a6e2-3c2014f08dec)
-![Screenshot 2025-03-20 110803](https://github.com/user-attachments/assets/0c8887ee-64fd-4940-98e8-5eb61016fddb)
-![Screenshot 2025-03-20 113908](https://github.com/user-attachments/assets/1914774e-7155-448b-808b-402c3667b731)
-![Screenshot 2025-03-20 113855](https://github.com/user-attachments/assets/87281c62-25ed-46c9-b29b-01b20896a847)
-![Screenshot 2025-03-20 113834](https://github.com/user-attachments/assets/0fc52dbc-1fd9-4c25-a9fb-6c5ec29b8fe1)
-
-
+I understand your concern about labeling the challenges faced by emerging testnets as a "Problem" in the `README.md`. Let me explain why I framed it this way and then adjust the section to better align with your perspective while maintaining clarity and professionalism.
 
 ---
 
-## 🌟 Features
+### Why I Called It a "Problem"
+In the context of a project like ProofChain, identifying a "problem" is a common practice in project documentation (like a `README.md`) to clearly define the challenge or gap that your project aims to address. This helps the audience—whether they are developers, potential collaborators, or evaluators—understand the motivation behind your project and why it’s valuable. Here’s the reasoning behind the original phrasing:
 
-### **Advanced AI-Powered Analysis**
-- Leveraging Mistral AI's large language model for comprehensive smart contract security analysis.
-- Real-time vulnerability detection and remediation suggestions.
-- Custom contract validation against known attack vectors.
-- Advanced gas optimization recommendations for each blockchain.
+1. **Highlighting a Gap**: Emerging testnets like EduChain Apothem, Celo Testnet, and Electroneum Testnet are often less supported compared to mainstream networks (e.g., Ethereum, Polygon). They may lack tools for smart contract auditing, building, and testing, which can hinder developers who want to experiment or build on these testnets. By calling this a "problem," I aimed to emphasize the gap that ProofChain fills.
 
-### **Cross-Chain Integration**
-- Seamless deployment to **Ethereum**, **Binance Smart Chain**, **Polygon**, **Avalanche**, and more.
-- Chain-specific security validation and optimizations.
-- Instant verification on multiple blockchain explorers.
-- Unified dashboard for managing cross-chain deployments.
+2. **Setting the Stage for Your Solution**: By describing the challenges (e.g., lack of accessible tools, limited security solutions), it sets up ProofChain as a solution that directly addresses these issues. This problem-solution structure is a standard way to communicate the purpose of a project, especially in technical documentation or presentations.
 
-### **Self-Contained Smart Contract Templates**
-- Dependency-free ERC20, ERC721, and ERC1155 implementations.
-- AI-assisted contract generation with custom specifications.
-- Built-in security best practices and patterns.
-- Chain-specific gas optimizations for improved performance.
+3. **Appealing to the Audience**: Developers and blockchain enthusiasts are likely to resonate with the challenges of working on emerging testnets. Framing it as a "problem" makes it relatable and underscores the importance of your project in solving real-world issues.
 
-### **Secure Contract Building**
-- Zero-dependency contract architecture.
-- Comprehensive event emissions for full transparency.
-- Robust access control and integrity checks.
+However, I understand that the term "problem" might feel too negative or critical, especially if you view these testnets as innovative and promising rather than problematic. Instead, we can reframe this section to focus on the **opportunity** or **challenge** that ProofChain addresses, which will maintain a positive tone while still explaining the motivation behind your project.
+
+---
+
+### Updated Section: Reframing "Problem" as "Challenge"
+I’ll revise the "Our Mission: Empowering Emerging Testnets" section to replace "Problem" with "Challenge" and adjust the language to focus on the opportunity for innovation. This will keep the tone positive and forward-looking while still explaining why ProofChain is needed.
+
+Here’s the updated `README.md` with the revised section:
+
+---
+
+# ProofChain 🛡️
+
+**Audit, Build, and Test Smart Contracts with ProofChain**
+
+Use ProofChain’s AI-driven tools to audit, build, and test your smart contracts with precision, ensuring security and efficiency across emerging testnets like EduChain Apothem, Celo Testnet, and Electroneum Testnet. Powered by Mistral AI, ProofChain is the ultimate solution for developers, auditors, and educators in the blockchain space.
+
+---
+
+## 🎯 Our Mission: Empowering Emerging Testnets
+
+### **Challenge**
+Emerging testnets like EduChain Apothem, Celo Testnet, and Electroneum Testnet are paving the way for innovation in educational and experimental blockchain ecosystems. However, they often lack accessible tools for smart contract auditing, building, and testing, which can slow down development and limit the ability to ensure security and efficiency.
+
+### **Opportunity with ProofChain**
+ProofChain seizes this opportunity by:
+- Supporting **EduChain Apothem Testnet**, **Celo Testnet**, and **Electroneum Testnet** for seamless development.
+- Using Mistral AI for real-time auditing, building, and testing of smart contracts.
+- Offering automated documentation and auditor insights to streamline workflows.
+- Enabling one-click deployments with on-chain verification.
+
+---
+
+## 🌟 Key Features
+
+### **AI-Powered Auditing**
+- Real-time vulnerability detection using Mistral AI.
+- Custom validation against known attack vectors.
+- Gas optimization recommendations tailored for testnets.
+
+### **Smart Contract Building**
+- Dependency-free ERC20, ERC721, and ERC1155 templates.
+- Built-in security best practices and testnet optimizations.
 - Configurable parameters with validation.
 
-### **On-Chain Verification System**
-- All audit reports permanently stored on respective blockchains.
-- Immutable audit history for complete traceability.
-- Verifiable security scores and detailed reports.
-- Direct explorer integration for transparency.
+### **Smart Contract Testing**
+- Simulated sandbox environment for rapid prototyping.
+- Testnet-specific transaction monitoring.
+- AI-driven test case generation (coming May 2025).
 
-### **Interactive Development Experience**
-- Real-time code generation and validation.
-- Instant security analysis with detailed feedback.
-- Live deployment monitoring and transaction tracking.
-- Reactive network connection status.
+### **Cross-Testnet Deployment**
+- Supports **EduChain Apothem Testnet**, **Celo Testnet**, and **Electroneum Testnet**.
+- Testnet-specific security checks and explorer integration.
+- Unified dashboard for managing deployments.
 
----
+### **Auditor Profile Dashboard**
+- Track your audit history, total audits, and average ratings.
+- Visualize testnet-specific audit distributions.
+- View recent audits with summaries, ratings, and timestamps.
 
-## 🔍 Key Components
+### **Smart Contract Documentation Generator**
+- Automatically generate structured documentation for contracts.
+- Extract functions, events, and variables with descriptions.
+- Export as JSON or Markdown for easy sharing.
 
-### **AI-Powered Security Analysis**
-- Real-time vulnerability detection.
-- Custom contract validation against attack vectors.
-- Advanced gas optimization recommendations.
-- Enforcement of blockchain-specific best practices.
-
-### **Smart Contract Builder**
-- Self-contained templates without external dependencies.
-- Custom implementations with security by design.
-- Chain-specific optimizations.
-- Configurable parameters with validation.
-
-### **Deployment & Verification Pipeline**
-- One-click deployment to multiple blockchains.
-- Automatic security verification.
-- Real-time transaction monitoring.
-- Seamless explorer integration.
-
-### **Comprehensive Documentation & Test Generation**
-- Automatically generated smart contract documentation.
-- AI-powered test case creation for multiple frameworks.
+### **Enhanced Features**
+- **Testnet Faucet Integration**: Request testnet tokens for EduChain Apothem, Celo Testnet, and Electroneum Testnet directly from the dashboard.
+- **Multi-Language Documentation**: Generate contract documentation in multiple languages (e.g., English, Spanish, Mandarin) for global accessibility.
+- **Developer Sandbox Environment**: Test contracts in a simulated environment with pre-configured testnet settings.
 
 ---
 
+## 🚀 Upcoming Advanced Features (Launching May 2025)
+
+- **AI-Driven Test Case Generation**: Automatically generate comprehensive test cases for smart contracts, tailored for EduChain Apothem, Celo Testnet, and Electroneum Testnet.
+- **Real-Time Vulnerability Monitoring**: Continuously monitor deployed contracts for new vulnerabilities, with alerts and automated remediation suggestions.
+- **Cross-Testnet Analytics Dashboard**: Analyze audit trends, gas usage, and security scores across all supported testnets in a single, interactive dashboard.
+- **Smart Contract Version Control**: Track and compare contract versions with AI-generated change logs and security impact analysis.
+- **AI-Powered Code Refactoring**: Suggest and apply code improvements for better security and efficiency using Mistral AI.
+
+---
+
+## 🌐 Live Demo
+
+Try ProofChain now: [ProofChain Demo](https://proofchain.netlify.app/)  
+📺 Watch our demo video: [ProofChain Demo Video](https://youtu.be/your-video-link)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15, Tailwind CSS, Shadcn UI
+- **AI Engine**: Mistral AI Large Language Model
+- **Blockchain**: ethers.js, wagmi (for wallet integration)
+- **UX**: Framer Motion, Phosphor Icons
+- **Validation**: Zod Schema
+- **Database**: MongoDB (for analytics)
+
+### **Why This Stack?**
+- **Next.js 15**: Ensures a fast, scalable frontend with App Router for seamless routing.
+- **Mistral AI**: Powers advanced auditing, building, and testing capabilities.
+- **wagmi**: Simplifies multi-testnet wallet integration, enhancing user experience.
+- **Framer Motion**: Adds smooth animations for an engaging UI.
+- **MongoDB**: Stores audit analytics for cross-testnet insights.
+
+---
+
+## 🔍 How It Works
+
+1. **Connect Wallet**: Use MetaMask to connect to ProofChain.
+2. **Audit**: Run AI-powered security audits with real-time feedback.
+3. **Build**: Use secure templates to build your smart contract.
+4. **Test**: Test your contract in a sandbox environment or on a testnet.
+5. **Document**: Generate detailed documentation with the Documentation Generator.
+6. **Track**: Monitor your audit history via the Auditor Profile Dashboard.
+7. **Deploy**: Deploy to your chosen testnet with one click.
+8. **Verify**: Access immutable audit reports on-chain via testnet explorers.
+
+---
+
+## 📸 Screenshots
+
+| Auditor Profile Dashboard | Smart Contract Documentation |
+|---------------------------|------------------------------|
+| ![Auditor Profile](https://github.com/user-attachments/assets/6fa5b2b3-1401-4399-bb79-fc6baba22d6c) | ![Documentation Generator](https://github.com/user-attachments/assets/98320fda-e7ec-44af-a6e2-3c2014f08dec) |
+
+| Cross-Testnet Deployment | Security Analysis |
+|--------------------------|-------------------|
+| ![Cross-Testnet](https://github.com/user-attachments/assets/0c8887ee-64fd-4940-98e8-5eb61016fddb) | ![Security](https://github.com/user-attachments/assets/1914774e-7155-448b-808b-402c3667b731) |
+
+---
 
 ## 🚀 Quick Start
 
 ### **Prerequisites**
 - Node.js >= 16.x
 - MetaMask or compatible Web3 wallet
-- Access to supported blockchains (Mainnet & Testnet)
-- Native tokens for contract deployment (e.g., ETH, BNB, MATIC)
+- Native testnet tokens (e.g., XAH for EduChain Apothem, CELO for Celo Testnet, ETN for Electroneum Testnet)
 
-### **Installation**
-1. Clone the repository:
+### **Setup**
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/0xkid-root/SecureFi-metamask
-   cd SecureFi
+   git clone https://github.com/0xkid-root/ProofChain-metamask
+   cd ProofChain
    ```
-2. Install dependencies:
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
-3. Configure your environment variables:
-   - Create a `.env` file in the root directory.
-   - Add your blockchain provider URLs and API keys:
-     ```env
-     ETHEREUM_RPC_URL=https://mainnet.infura.io/v3/YOUR_INFURA_KEY
-     BSC_RPC_URL=https://bsc-dataseed.binance.org/
-     POLYGON_RPC_URL=https://polygon-rpc.com/
-     ```
-4. Start the development server:
+3. **Configure Environment Variables** (create a `.env` file):
+   ```env
+   EDUCHAIN_APOTHEM_RPC_URL=https://apothem.xdc.network
+   CELO_TESTNET_RPC_URL=https://alfajores-forno.celo-testnet.org
+   ELECTRONEUM_TESTNET_RPC_URL=https://testnet-api.electroneum.com
+   NEXT_PUBLIC_MISTRAL_API_KEY=YOUR_MISTRAL_API_KEY
+   ```
+4. **Start the Development Server**:
    ```bash
    npm run dev
    ```
+5. Open `http://localhost:3000` and connect your wallet.
 
 ### **Usage**
-1. Connect your wallet to the SecureFi dashboard.
-2. Select the target blockchain (Ethereum, BSC, Polygon, etc.).
-3. Choose a smart contract template or upload your custom contract.
-4. Run an AI-powered security audit.
-5. Deploy your contract with one click.
-6. Monitor and verify your deployment on the blockchain explorer.
+- **Audit**: Upload your contract to run an AI-powered security audit.
+- **Build**: Use templates to create secure smart contracts.
+- **Test**: Test in the sandbox or deploy to a testnet.
+- **Document**: Generate and export contract documentation.
+- **Track**: View your audit stats in the Auditor Profile Dashboard.
 
 ---
 
-## 🔧 Technology Stack
+## 🔗 Supported Testnets
 
-- **Frontend**: Next.js 14, Tailwind CSS, Shadcn UI
-- **AI Engine**: Mistral AI Large Language Model
-- **Blockchain Interface**: ethers.js, web3.js
-- **User Experience**: Framer Motion, Phosphor Icons
-- **Validation**: Zod Schema Validation
-- **Database**: MongoDB (for user data and analytics)
-- **API**: RESTful API for integrations
+- **EduChain Apothem Testnet** (XinFin Network’s educational testnet for scalable blockchain learning)
+- **Celo Testnet** (Alfajores, for testing mobile-first DeFi applications)
+- **Electroneum Testnet** (For testing ETN-based microtransactions and mobile payments)
 
 ---
 
@@ -138,114 +194,89 @@
 
 | Rating | Description |
 |--------|-------------|
-| ⭐⭐⭐⭐⭐ | Perfect: Zero vulnerabilities, fully optimized for target blockchain |
-| ⭐⭐⭐⭐ | Very Good: No critical issues, minor optimizations needed |
-| ⭐⭐⭐ | Good: No critical but has high severity issues |
-| ⭐⭐ | Poor: Has critical vulnerability or multiple high severity issues |
-| ⭐ | Very Poor: Multiple critical and high severity vulnerabilities |
-| 0 | Critical: Fundamental security flaws, unsafe for deployment |
+| ⭐⭐⭐⭐⭐ | Perfect: Zero vulnerabilities, fully optimized |
+| ⭐⭐⭐⭐ | Very Good: Minor optimizations needed |
+| ⭐⭐⭐ | Good: High severity issues present |
+| ⭐⭐ | Poor: Critical vulnerabilities detected |
+| ⭐ | Very Poor: Multiple critical issues |
+| 0 | Critical: Unsafe for deployment |
 
 ---
 
-## 🌐 Live Demo
+## 🌟 Why ProofChain Stands Out
 
-Visit [SecureFi](https://securefi.netlify.app/) to try it out on multiple blockchains!
-
-
-## 🔗 Supported Blockchains
-
-- **Ethereum**
-- **Binance Smart Chain (BSC)**
-- **Polygon (Matic)**
-- **Avalanche**
-- **Fantom**
-- **Arbitrum**
-- **Optimism**
-
----
-
-## 📬 Contact & Support
-
-- Join the [SecureFi Discord](https://discord.gg/securefi-999612117521010768)
-- Follow SecureFi updates on [Twitter](https://x.com/SecureFi_ai)
-- Email: support@securefi.ai
-
----
-
-## 📄 License
-
-This project is licensed under MIT - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🆕 Extra Features
-
-### **Cross-Chain Interoperability**
-- Seamless interaction between different blockchains.
-- Cross-chain asset transfers.
-- Unified security analysis across chains.
-
-### **Multi-Chain Wallet Integration**
-- Support for multiple wallets across different chains.
-- Unified wallet interface for easy management.
-
-### **Enhanced Security Protocols**
-- Advanced threat detection using AI.
-- Real-time monitoring of deployed contracts.
-- Automated security patches and updates.
-
-### **Community-Driven Development**
-- Open-source contributions welcome.
-- Regular updates based on community feedback.
-- Transparent development roadmap.
-
-### **Educational Resources**
-- Comprehensive tutorials and guides.
-- Interactive learning modules.
-- Regular webinars and workshops.
-
-### **Enterprise Support**
-- Dedicated support for enterprise clients.
-- Custom solutions for large-scale deployments.
-- Priority access to new features and updates.
-
-### **API Access**
-- RESTful API for integration with other services.
-- WebSocket support for real-time updates.
-- Comprehensive API documentation.
+- **Tagline in Action**: "Audit, Build, and Test Smart Contracts with ProofChain" – a one-stop solution for all smart contract needs.
+- **Emerging Testnet Support**: First to support EduChain Apothem, Celo Testnet, and Electroneum Testnet for educational and experimental use cases.
+- **AI-Driven Innovation**: Integrates Mistral AI for real-time auditing, building, and testing.
+- **Developer-Friendly**: Automated documentation, testnet faucet integration, and sandbox environment save time.
+- **Transparency**: On-chain audit reports ensure trust and traceability.
+- **Future-Ready**: Advanced features like AI-driven test case generation and real-time monitoring planned for May 2025.
 
 ---
 
 ## 🛠️ Development Roadmap
 
-### **Phase 1: Core Features**
-- AI-powered security analysis.
-- Cross-chain deployment support.
-- Smart contract templates.
+### **Phase 1: Initial Release (March 2025)**
+- Core auditing, building, and testing features.
+- Auditor Profile Dashboard and Documentation Generator.
+- Support for EduChain Apothem, Celo Testnet, and Electroneum Testnet.
 
-### **Phase 2: Advanced Features**
-- Cross-chain interoperability.
-- Multi-chain wallet integration.
-- Enhanced security protocols.
+### **Phase 2: Advanced Features (May 2025)**
+- AI-driven test case generation and real-time vulnerability monitoring.
+- Cross-testnet analytics dashboard and smart contract version control.
+- AI-powered code refactoring for enhanced security.
 
-### **Phase 3: Community & Enterprise**
-- Community governance.
-- Enterprise support.
-- Educational resources.
+### **Phase 3: Community & Education (Q3 2025)**
+- Community governance and contributions.
+- Educational resources for testnet developers.
+- Integration with more emerging testnets.
 
 ---
 
-## 🤝 Contributing
+## 🤝 Team
 
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+- **Gaurav Kumar** - Lead Developer & Blockchain Engineer  
+  - Built the core AI integration, auditor dashboard, and documentation generator.  
+  - Passionate about blockchain security and emerging testnets.
+
+- **Bhagrav Kumar** - Lead Developer & Blockchain Engineer  
+  - Built the core AI integration, auditor dashboard, and documentation generator.  
+  - Passionate about blockchain security and emerging testnets.
+
+*(Add more team members if applicable)*
+
+---
+
+## 📬 Contact Us
+
+- **Twitter**: [ProofChain_ai](https://x.com/ProofChain_ai)
+- **Email**: support@proofchain.ai
+
+---
+
+## 📄 License
+
+Licensed under MIT - see [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Mistral AI for providing the powerful language model.
-- The Ethereum, Binance Smart Chain, and Polygon communities for their support.
-- All open-source contributors who made this project possible.
+- **Mistral AI** for their powerful language model.
+- **EduChain, Celo, and Electroneum Communities** for their support and testnet infrastructure.
+- **Open-Source Community** for inspiring innovation in blockchain development.
 
+---
+
+## 🆕 Contributing
+
+We welcome contributions from the community! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+For more details, see our [Contributing Guidelines](CONTRIBUTING.md).
 
 
