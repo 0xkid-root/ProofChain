@@ -1,40 +1,18 @@
 export const CONTRACT_ADDRESSES = {
-	electroneumTestnet: "0x11f932d3fa84Daa7FBb924ec67f26c03F9B997C7",
-	apothemTestnet: "0x0552d01E1Dc6F4a9779675c97307DFb148F5B0Cf",
-	eduChainTestnet: "0x164A728f30de2E23c467C53C036D46efd2867C94",
-	celoAlfajoresTestnet: "0x164A728f30de2E23c467C53C036D46efd2867C94", 
+	electroneumTestnet: "0x07cE893Ce0Cc30b96fcD21B9a8352D23671f1Cd4",
+	apothemTestnet: "0xCD9735e5bdc463531709990cFB70b9156327c19d",
+	eduChainTestnet: "0x0b2Bf2D8Ef1Be332ba303E5BCa81d67A48bF7076",
+	celoAlfajoresTestnet: "0x9fE70671061Fdf1227Fa3667AFDc17c730865325", 
   } as const;
 
-// celo 0x164A728f30de2E23c467C53C036D46efd2867C94
-// edu testnet 0x164A728f30de2E23c467C53C036D46efd2867C94
+// celo 0x9fE70671061Fdf1227Fa3667AFDc17c730865325
+// edu testnet 0x0b2Bf2D8Ef1Be332ba303E5BCa81d67A48bF7076
 
 export const AUDIT_REGISTRY_ABI =[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			}
-		],
-		"name": "OwnableInvalidOwner",
-		"type": "error"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			}
-		],
-		"name": "OwnableUnauthorizedAccount",
-		"type": "error"
 	},
 	{
 		"anonymous": false,
@@ -91,6 +69,67 @@ export const AUDIT_REGISTRY_ABI =[
 		],
 		"name": "OwnershipTransferred",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "contractHash",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint8",
+				"name": "stars",
+				"type": "uint8"
+			},
+			{
+				"internalType": "string",
+				"name": "summary",
+				"type": "string"
+			}
+		],
+		"name": "registerAudit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "auditor",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "status",
+				"type": "bool"
+			}
+		],
+		"name": "setAuditor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -346,54 +385,6 @@ export const AUDIT_REGISTRY_ABI =[
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "bytes32",
-				"name": "contractHash",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "uint8",
-				"name": "stars",
-				"type": "uint8"
-			},
-			{
-				"internalType": "string",
-				"name": "summary",
-				"type": "string"
-			}
-		],
-		"name": "registerAudit",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "auditor",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "status",
-				"type": "bool"
-			}
-		],
-		"name": "setAuditor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "totalAudits",
 		"outputs": [
@@ -404,19 +395,6 @@ export const AUDIT_REGISTRY_ABI =[
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ] as const;
