@@ -180,7 +180,7 @@ export default function ContractBuilder() {
     }
   }, [receipt, receiptError]);
 
-  // Handle deployContractError (e.g., user rejectsКаждый transaction)
+  // Handle deployContractError (e.g., user rejects transaction)
   useEffect(() => {
     if (deployContractError) {
       console.error('Deploy contract error:', deployContractError);
@@ -331,19 +331,19 @@ export default function ContractBuilder() {
 
     try {
       const currentChainId = chain?.id;
-      const supportedChainIds = Object.values(CHAIN_CONFIG).map(chain => chain.id) as (51 | 5201420 | 656476 | 44787)[];
+      const supportedChainIds = Object.values(CHAIN_CONFIG).map(chain => chain.id) as (51 | 5201420 | 656476 | 44787 | 59144)[];
 
       console.log('Current Chain ID:', currentChainId);
       console.log('Supported Chain IDs:', supportedChainIds);
 
-      // Fixed: Type assertion to match the union type
-      if (!currentChainId || !supportedChainIds.includes(currentChainId as 51 | 5201420 | 656476 | 44787)) {
+      // Updated: Include 59144 (Linea Testnet) in the type assertion
+      if (!currentChainId || !supportedChainIds.includes(currentChainId as 51 | 5201420 | 656476 | 44787 | 59144)) {
         const firstSupportedChainId = supportedChainIds[0];
         console.log('Switching to chain ID:', firstSupportedChainId);
         if (switchChain) {
           await switchChain({ chainId: firstSupportedChainId });
         }
-        throw new Error('Please switch to a supported network');
+        throw new Error('Please switch to a supported network (Electroneum, EDU Chain, Apothem, Celo Alfajores, or Linea Testnet)');
       }
 
       const args = Object.entries(contractParams).map(([key, val]) => {

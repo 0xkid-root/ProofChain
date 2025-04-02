@@ -13,6 +13,7 @@ import { CHAIN_CONFIG } from '@/utils/web3-config';
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isChainMenuOpen, setIsChainMenuOpen] = useState(false);
+  const [isContractBuilderMenuOpen, setIsContractBuilderMenuOpen] = useState(false); // New state for Contract Builder dropdown
   const [isMounted, setIsMounted] = useState(false);
 
   const { address } = useAccount();
@@ -31,6 +32,9 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
       const target = event.target as HTMLElement;
       if (!target.closest('#chain-switcher')) {
         setIsChainMenuOpen(false);
+      }
+      if (!target.closest('#contract-builder')) {
+        setIsContractBuilderMenuOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -98,7 +102,6 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
         </nav>
         <main className="pt-16 bg-black">{children}</main>
         <footer className="bg-black border-t border-purple-900 py-12">
-          {/* Minimal footer for initial render */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div>
@@ -136,7 +139,45 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
             </Link>
 
             <div className="hidden md:flex items-center space-x-1">
-              <NavLink href="/contract-builder">Contract-builder</NavLink>
+              {/* Contract Builder Dropdown */}
+              <div className="relative" id="contract-builder">
+                <button
+                  onClick={() => setIsContractBuilderMenuOpen(!isContractBuilderMenuOpen)}
+                  className="flex items-center space-x-1 px-3 py-2 rounded-lg text-purple-300 hover:text-white hover:bg-purple-900/50 transition-all duration-200"
+                >
+                  <span>Contract Builder</span>
+                  {isContractBuilderMenuOpen ? (
+                    <CaretUp className="w-4 h-4 text-purple-400" />
+                  ) : (
+                    <CaretDown className="w-4 h-4 text-purple-400" />
+                  )}
+                </button>
+
+                {isContractBuilderMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 mt-2 w-48 rounded-lg bg-purple-950/90 backdrop-blur-lg border border-purple-900 shadow-lg shadow-purple-900/20 py-1 overflow-hidden"
+                  >
+                    <Link
+                      href="/contract-builder"
+                      className="block px-4 py-2 text-sm text-purple-300 hover:bg-purple-900/70 hover:text-white transition-all duration-200"
+                      onClick={() => setIsContractBuilderMenuOpen(false)}
+                    >
+                      Builder
+                    </Link>
+                    <Link
+                      href="/contractDecoder"
+                      className="block px-4 py-2 text-sm text-purple-300 hover:bg-purple-900/70 hover:text-white transition-all duration-200"
+                      onClick={() => setIsContractBuilderMenuOpen(false)}
+                    >
+                      Contract Decoder
+                    </Link>
+                  </motion.div>
+                )}
+              </div>
+
               <NavLink href="/testcase-generator">Test</NavLink>
               <NavLink href="/audit">Audit</NavLink>
               <NavLink href="/reports">Reports</NavLink>
@@ -253,11 +294,32 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
             className="md:hidden bg-black/95 backdrop-blur-xl border-b border-purple-900"
           >
             <div className="px-4 pt-2 pb-3 space-y-2">
-              <MobileNavLink href="/contract-builder">Contract Builder</MobileNavLink>
+              {/* Contract Builder Dropdown for Mobile */}
+              <div>
+                <button
+                  onClick={() => setIsContractBuilderMenuOpen(!isContractBuilderMenuOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2.5 text-purple-300 hover:text-white hover:bg-purple-600/20 rounded-lg transition-colors duration-200 border-l-2 border-transparent hover:border-purple-600"
+                >
+                  <span>Contract Builder</span>
+                  {isContractBuilderMenuOpen ? (
+                    <CaretUp className="w-4 h-4 text-purple-400" />
+                  ) : (
+                    <CaretDown className="w-4 h-4 text-purple-400" />
+                  )}
+                </button>
+                {isContractBuilderMenuOpen && (
+                  <div className="pl-4 space-y-1 mt-1">
+                    <MobileNavLink href="/contract-builder">Builder</MobileNavLink>
+                    <MobileNavLink href="/">Contract Decoder</MobileNavLink>
+                  </div>
+                )}
+              </div>
+
               <MobileNavLink href="/testcase-generator">Test Generator</MobileNavLink>
               <MobileNavLink href="/audit">Audit</MobileNavLink>
               <MobileNavLink href="/reports">Reports</MobileNavLink>
               <MobileNavLink href="/documentor">Documentor</MobileNavLink>
+              <MobileNavLink href="/w3hackHub">W3HackHub</MobileNavLink>
               <MobileNavLink href="/profile">Profile</MobileNavLink>
 
               {address && (

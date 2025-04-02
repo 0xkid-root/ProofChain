@@ -1,12 +1,14 @@
 import { QueryClient } from "@tanstack/react-query";
 import { http, createConfig } from "wagmi";
 import { metaMask } from "wagmi/connectors";
+import { lineaSepolia } from "wagmi/chains";
 
 export type ChainKey =
   | 'electroneumTestnet'
   | 'eduChainTestnet'
   | 'apothemTestnet'
-  | 'celoAlfajoresTestnet';
+  | 'celoAlfajoresTestnet'
+  | 'lineaSepolia';
 
 export const electroneumTestnet = {
   id: 5201420,
@@ -45,7 +47,7 @@ export const apothemTestnet = {
     public: { http: ['https://rpc.apothem.network'] },
   },
   blockExplorers: {
-    default: { name: 'XDC Testnet Explorer', url: 'https://explorer.apothem.network' } },
+    default: { name: 'XDC Testnet Explorer', url: 'https://explorer.apothem.network', apiKey: process.env.NEXT_PUBLIC_APOTHEM_API_KEY } },
   documentationUrl: 'https://docs.xinfin.org',
   iconPath: '/chains/apothem.png',
 } as const;
@@ -64,11 +66,18 @@ export const celoAlfajoresTestnet = {
   iconPath: '/chains/celo.png',
 } as const;
 
+// Extend lineaSepolia with iconPath
+export const lineaSepoliaTestnet = {
+  ...lineaSepolia,
+  iconPath: '/chains/linea.png', 
+} as const;
+
 export const CHAIN_CONFIG = {
   electroneumTestnet,
   eduChainTestnet,
   apothemTestnet,
   celoAlfajoresTestnet,
+  lineaSepolia: lineaSepoliaTestnet,
 } as const;
 
 export const config = createConfig({
@@ -77,6 +86,7 @@ export const config = createConfig({
     eduChainTestnet,
     apothemTestnet,
     celoAlfajoresTestnet,
+    lineaSepoliaTestnet,
   ],
   connectors: [
     metaMask(),
@@ -86,6 +96,7 @@ export const config = createConfig({
     [eduChainTestnet.id]: http(),
     [apothemTestnet.id]: http(),
     [celoAlfajoresTestnet.id]: http(),
+    [lineaSepoliaTestnet.id]: http(),
   },
 });
 
