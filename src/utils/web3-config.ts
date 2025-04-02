@@ -70,6 +70,7 @@ export const celoAlfajoresTestnet = {
 export const lineaSepoliaTestnet = {
   ...lineaSepolia,
   iconPath: '/chains/linea.png', 
+  documentationUrl: 'https://docs.linea.build',
 } as const;
 
 export const CHAIN_CONFIG = {
